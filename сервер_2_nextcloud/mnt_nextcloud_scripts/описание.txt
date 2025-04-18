@@ -1,0 +1,6 @@
+Для монтирования удаленной папки с сервера с помощью sshfs нужно:
+1) Обновить систему (sudo apt update) и установить sshfs (sudo apt install sshfs)
+2) Установить ssh-сервер (sudo apt install openssh-server)
+3) Проверить состояние ssh-демона (systemctl is-active sshd), если не запущен запустить (sshd)
+4) Запустить скрипт mnt_user2_nextcloud.sh
+

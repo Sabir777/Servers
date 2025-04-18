@@ -1,5 +1,0 @@
-# .bashrc
-# Проверяем, запущен ли уже sshfs, чтобы не монтировать повторно
-if ! mountpoint -q ~/mnt_user2_nextcloud; then
-    bash ~/mnt_user2_nextcloud.sh
-fi
