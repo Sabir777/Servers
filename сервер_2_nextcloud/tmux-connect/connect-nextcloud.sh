@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/data/data/com.termux/files/usr/bin/env bash
 
 # Если сессия существует - подключаюсь к ней, если нет то создаю сессию
 tmux has-session -t Connected
