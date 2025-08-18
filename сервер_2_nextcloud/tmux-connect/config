@@ -1,0 +1,6 @@
+Host 85.159.231.218
+    ServerAliveInterval 30
+    ServerAliveCountMax 3
+    ConnectTimeout 10
+    TCPKeepAlive yes
+    Compression yes
