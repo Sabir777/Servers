@@ -61,7 +61,7 @@ echo "Настраиваю SSHFS монтирование..."
 safe_send_keys "$SESSION_NAME:mnt" "mkdir -p ~/mnt_user2_nextcloud" 2
 
 # Размонтируем если уже смонтировано и монтируем заново
-MOUNT_COMMAND="sudo umount ~/mnt_user2_nextcloud 2>/dev/null; sshfs -o reconnect,ServerAliveInterval=15,ServerAliveCountMax=3 user2@$SERVER_IP:/home/user2 ~/mnt_user2_nextcloud && cd ~/mnt_user2_nextcloud && ls -la"
+MOUNT_COMMAND="sudo umount ~/mnt_user2_nextcloud 2>/dev/null; sudo sshfs -o reconnect,ServerAliveInterval=15,ServerAliveCountMax=3,allow_other,uid=10378,gid=10378 user2@$SERVER_IP:/home/user2 ~/mnt_user2_nextcloud && cd ~/mnt_user2_nextcloud && ls -la"
 safe_send_keys "$SESSION_NAME:mnt" "$MOUNT_COMMAND" 8
 
 # Переключаюсь в окно "user2"
